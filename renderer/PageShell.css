@@ -1,19 +1,6 @@
-/* This CSS is common to all pages */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*@import "../node_modules/markdown-air/index.css";*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
-
-.navitem {
-  padding: 3px 10px;
-}
-.navitem.is-active {
-  background-color: #eee;
-}

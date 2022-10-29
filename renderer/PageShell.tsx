@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './logo.svg'
 import { PageContextProvider } from './usePageContext'
 import type { PageContext } from './types'
 import './PageShell.css'
@@ -11,18 +10,19 @@ function PageShell({ children, pageContext }: { children: React.ReactNode; pageC
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <Layout>
-          <Sidebar>
-            <Logo />
-            <Link className="navitem" href="/">
-              Home
-            </Link>
-            <Link className="navitem" href="/about">
-              About
-            </Link>
-          </Sidebar>
-          <Content>{children}</Content>
-        </Layout>
+          {children}
+        {/*<Layout>*/}
+        {/*  <Sidebar>*/}
+        {/*    <Logo />*/}
+        {/*    <Link className="navitem" href="/">*/}
+        {/*      Home*/}
+        {/*    </Link>*/}
+        {/*    <Link className="navitem" href="/about">*/}
+        {/*      About*/}
+        {/*    </Link>*/}
+        {/*  </Sidebar>*/}
+        {/*  <Content>{children}</Content>*/}
+        {/*</Layout>*/}
       </PageContextProvider>
     </React.StrictMode>
   )
@@ -70,21 +70,6 @@ function Content({ children }: { children: React.ReactNode }) {
       }}
     >
       {children}
-    </div>
-  )
-}
-
-function Logo() {
-  return (
-    <div
-      style={{
-        marginTop: 20,
-        marginBottom: 10
-      }}
-    >
-      <a href="/">
-        <img src={logo} height={64} width={64} alt="logo" />
-      </a>
     </div>
   )
 }
